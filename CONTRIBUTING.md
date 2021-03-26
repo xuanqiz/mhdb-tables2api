@@ -6,9 +6,6 @@ Path: api/settings/**settings.py**
 ```
 'DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        #'NAME': 'lisasql1',
-        #'PORT':'5431', databases created by postgres.app, 5432 for database pgadmin4
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'lisasql2',
         'USER':'postgres',
@@ -30,28 +27,29 @@ If you would like to update the code to generate a new Postgresql at your own co
 7. Generation: pg_dump -U postgres 'NAME' > NameofYourWish.sql
 
 ## Extra for absolute beginners (like me)
-Aim: Recreate the schema in postgresql to generate a *.sql
-[Original Reference](https://github.com/ChildMindInstitute/mhdb-tables2api)
+Aim: Recreate the schema in postgresql to generate a *.sql\
+[Original Github Repo](https://github.com/ChildMindInstitute/mhdb-tables2api)\
+fork it to start
 
 ### Django Tutorial
-[Official documentation for beginners](https://docs.djangoproject.com/en/3.1/intro/tutorial01/)
-$django-admin startproject nameofsite
-/mysite $python3 manage.py runserver
-(meanwhile, make the database ready seperately in postgresql)
-$ python3 manage.py startapp nameofproject
-$ python3 manage.py migrate
-creating models in models.py (folder:nameofproject)
-activating models in settings.py (INSTALLED_APPS + 'nameofproject.apps.NameofprojectConfig')
-$ python3 manage.py makemigrations nameofproject
-$ python3 manage.py sqlmigrate nameofproject 000X (the largest number in _init_.py)
-$ python3 manage.py migrate (again, but to update in the database)
+[Official documentation for beginners](https://docs.djangoproject.com/en/3.1/intro/tutorial01/)\
+$django-admin startproject nameofsite\
+/mysite $python3 manage.py runserver\
+(meanwhile, make the database ready seperately in postgresql)\
+$ python3 manage.py startapp nameofproject\
+$ python3 manage.py migrate\
+creating models in models.py (folder:nameofproject)\
+activating models in settings.py (INSTALLED_APPS + 'nameofproject.apps.NameofprojectConfig')\
+$ python3 manage.py makemigrations nameofproject\
+$ python3 manage.py sqlmigrate nameofproject 000X (the largest number in _init_.py)\
+$ python3 manage.py migrate (again, but to update in the database)\
 
 ### Postgresql tutorial
-download and install [postgres.app](https://postgresapp.com/downloads.html)
-download and install [postgresSQL](https://www.postgresql.org/download/)
+download and install [postgres.app](https://postgresapp.com/downloads.html)\
+download and install [postgresSQL](https://www.postgresql.org/download/)\
 **modify properly the name and the password in the code 'settings.py'**
-Tutorial postgresSQL:
-[Installing and Setting up PostgreSQL Using Postgres.app](https://www.youtube.com/watch?v=WcCjNGb8g0o)
+Tutorial postgresSQL:\
+[Installing and Setting up PostgreSQL Using Postgres.app](https://www.youtube.com/watch?v=WcCjNGb8g0o)\
 create database NameOfDatabase **;**
 
 ### Tips:
@@ -64,3 +62,4 @@ create database NameOfDatabase **;**
 7. owner issue --- postgres=# REASSIGN OWNED BY old_name TO new_name **;** 
 8. generation code --- example: postgres=# REASSIGN OWNED BY old_name TO new_name;
 9. git add; git commit -m ''; git status, git push
+10. markdown documentation --- "```" for code "\" visible line break
