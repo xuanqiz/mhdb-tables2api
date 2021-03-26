@@ -47,8 +47,8 @@ $ python3 manage.py migrate (again, but to update in the database)\
 ### Postgresql tutorial
 download and install [postgres.app](https://postgresapp.com/downloads.html)\
 download and install [postgresSQL](https://www.postgresql.org/download/)\
-**modify properly the name and the password in the code 'settings.py'**
-Tutorial postgresSQL:\
+**modify properly the name and the password in the code 'settings.py'**\
+Tutorial postgresSQL:
 [Installing and Setting up PostgreSQL Using Postgres.app](https://www.youtube.com/watch?v=WcCjNGb8g0o)\
 create database NameOfDatabase **;**
 
@@ -62,4 +62,4 @@ create database NameOfDatabase **;**
 7. owner issue --- postgres=# REASSIGN OWNED BY old_name TO new_name **;** 
 8. generation code --- example: postgres=# REASSIGN OWNED BY old_name TO new_name;
 9. git add; git commit -m ''; git status, git push
-10. markdown documentation --- "```" for code "\" visible line break
+10. markdown documentation --- "```" for code "backslash\" visible line break 
